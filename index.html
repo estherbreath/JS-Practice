@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice</title>
-</head>
-<body>
-    <h1 style="height: 50px; background-color: red;">Practice</h1>
-   
-    
+  </head>
+  <body>
+    <h1 style="height: 50px; background-color: red">Practice</h1>
 
     <script>
+      "use strict";
 
-        'use strict';
+      // function greet() {
+      //     console.log('Hello there!');
+      // }
+      // greet();
 
-        // function greet() {
-        //     console.log('Hello there!');
-        // }
-        // greet();
+      function logger() {
+        console.log("my name is Esther");
+      }
 
-        // function add(a,b) {
-        // console.log(a + b);
-        // return (2 + 3);
-        // }
+      logger();
+      logger();
+      logger();
 
-        // add(4, 7);
+      function fruitProcessor(apples, oranges) {
+        const juice = `Juice with ${apples} apples and juice with ${oranges} oranges`;
+        return juice;
+      }
 
-        // //function declaration
-        // function calcAge1(birthYear) {
-        //     return 2025 - birthYear   
-        // }
-        // console.log(calcAge1(1985));
-        // const age1 = calcAge1(1985);
-        // console.log(age1);
+      const appleJuice = fruitProcessor(6, 4);
+      console.log(appleJuice);
 
-        // // function expression
-        
-        // const calcAge2 = function(birthYear){
-        //     return 2030 - birthYear
-        // }
-        // const age2 = calcAge2(1985);
-        // console.log(age1, age2);
+      // function add(a,b) {
+      // console.log(a + b);
+      // return (2 + 3);
+      // }
 
-        // // Arrow function
-        // // it is a short function expression
-        // const calcAge3 = birthYear => 2030 - birthYear;
-        // const age3 = calcAge3(1985);
-        // console.log(age3);
+      // add(4, 7);
 
-        // Muliple logic
-        // const yearUnilre = birthYear => {
-        //     const age = 2025 - birthYear;
-        //     const reirmenAge = 60 - yearUnilre;
-        //     return reirmenAge;
+      // //function declaration
+      function calcAge1(birthYear) {
+        return 2025 - birthYear;
+      }
 
-        // }
-        // console.log(yearUnilre(1985))
-         
+      //   console.log(calcAge1(1985));
+      const age1 = calcAge1(1985);
+      console.log(age1);
 
-//Arrays
+      // // function expression - anonymous function without a name
 
-// const friends = ['Joy', 'John', 'Lizzy', 'Uyo']
-// console.log(friends);
-// console.log(friends[0]);
-// console.log(friends[2]);
-// //to get all elements
-// console.log(friends.length);
-// //to get the last element
-// console.log(friends[friends.length -1]);
-// // mutate
-// friends[3] = 'Jimmy';
-// console.log(friends);
+      const calcAge2 = function (birthYear) {
+        return 2030 - birthYear;
+      };
+      const age2 = calcAge2(1985);
+      console.log(age1, age2);
 
-// // Other data types in array
-// const firstName = 'Esther';
-// const BossLady = [firstName, 2025 - 1990, 'Kaduna', friends]
-// console.log(BossLady);
+      // // Arrow function
+      // it is a short function expression
+      const calcAge3 = (birthYear) => 2030 - birthYear;
+      const age3 = calcAge3(1985);
+      console.log(age3);
 
-// Different elements with arrays
-//  function calcAge1(birthYear) {
-//             return 2025 - birthYear   
-//         }
-// const ages = [1999, 2000, 1970, 1977]
-// const age1 = calcAge1(ages[0]);
-// const age2 = calcAge1(ages[1]);
-// const age3 = calcAge1(ages[2]);
-// const age4 = calcAge1(ages[ages.length -1]);
+      // Muliple logic - you can use the return keyword in this case
+      const yearUntilRetirement = (birthYear, firstName) => {
+        const age = 2025 - birthYear;
+        const retirementAge = 65 - age;
+        return `${firstName} retires in ${retirementAge} years`;
+      };
+      console.log(yearUntilRetirement(1985, "Joy"));
+      console.log(yearUntilRetirement(2000, "Bob"));
 
+      //Arrays
 
-// console.log(age1, age2, age3, age4);
+      // const friends = ['Joy', 'John', 'Lizzy', 'Uyo']
+      // console.log(friends);
+      // console.log(friends[0]);
+      // console.log(friends[2]);
+      // //to get all elements
+      // console.log(friends.length);
+      // //to get the last element
+      // console.log(friends[friends.length -1]);
+      // // mutate
+      // friends[3] = 'Jimmy';
+      // console.log(friends);
 
-// console.log(BossLady.push('Yam'));
-// console.log(BossLady.pop(''))
+      // // Other data types in array
+      // const firstName = 'Esther';
+      // const BossLady = [firstName, 2025 - 1990, 'Kaduna', friends]
+      // console.log(BossLady);
 
-// pop
-// shif
+      // Different elements with arrays
+      // function calcAge1(birthYear) {
+      //            return 2025 - birthYear
+      //         }
 
-// loops
-// for (let i = 0; i < 5; i++) {
-//     console.log(i);
-// }
+      // const ages = [1999, 2000, 1970, 1977];
 
-// for (let x = 1; x < 21; x++) {
-//     console.log(x);
-// }
+      // const age1 = calcAge1.ages[0];
+      // const age2 = calcAge1.ages[1];
+      // const age3 = calcAge1.ages[2];
+      // const age4 = calcAge1.ages[ages.length -1];
 
-// for (let run = 1; run < 6; run++) {
-//     console.log('I can run');
-// }
+      // console.log(age1, age2, age3, age4);
 
-// // Rest
-// const[first, ...rest] = [1, 2, 3, 4, 5];
-// console.log(first);
-// console.log(rest);
+      // console.log(BossLady.push('Yam'));
+      // console.log(BossLady.pop(''))
 
-// const [firstN, ...Other] = ['Esty', 'Boss', 'Me', 'DeBoss'];
-// console.log(firstN);
-// console.log(Other);
+      // pop
+      // shif
 
-// spread operator
-// const myNum1 = [1, 2, 3, 4];
-// const myNum2 = [4, 5, 6];
-// const combine = [...myNum1, ...myNum2];
-// const copy = [...myNum2];
+      // loops
+      // for (let i = 0; i < 5; i++) {
+      //     console.log(i);
+      // }
 
-// console.log(combine, copy);
+      // for (let x = 1; x < 21; x++) {
+      //     console.log(x);
+      // }
 
-// // Destructuring
-// const numb = [34, 66, 20, 40];
-// const [a, b, c, d] = numb;
-// console.log(b);
+      // for (let run = 1; run < 6; run++) {
+      //     console.log('I can run');
+      // }
 
-// const me = {town: 'Kaduna', village: 'Ofabo'};
-// const {town, village} = me;
-// console.log(me);
+      // // Rest
+      // const[first, ...rest] = [1, 2, 3, 4, 5];
+      // console.log(first);
+      // console.log(rest);
 
+      // const [firstN, ...Other] = ['Esty', 'Boss', 'Me', 'DeBoss'];
+      // console.log(firstN);
+      // console.log(Other);
 
+      // spread operator
+      // const myNum1 = [1, 2, 3, 4];
+      // const myNum2 = [4, 5, 6];
+      // const combine = [...myNum1, ...myNum2];
+      // const copy = [...myNum2];
 
+      // console.log(combine, copy);
+
+      // // Destructuring
+      // const numb = [34, 66, 20, 40];
+      // const [a, b, c, d] = numb;
+      // console.log(b);
+
+      // const me = {town: 'Kaduna', village: 'Ofabo'};
+      // const {town, village} = me;
+      // console.log(me);
     </script>
-</body>
+  </body>
 </html>
