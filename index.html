@@ -104,56 +104,257 @@
       //   console.log(yearUntilRetirement(1991, "Joy"));
       //   console.log(yearUntilRetirement(1960, "Mike"));
 
-      //Arrays
+      //Arrays - data structure
 
-      // const friends = ['Joy', 'John', 'Lizzy', 'Uyo']
-      // console.log(friends);
-      // console.log(friends[0]);
-      // console.log(friends[2]);
-      // //to get all elements
-      // console.log(friends.length);
-      // //to get the last element
-      // console.log(friends[friends.length -1]);
+      /* const friends = ["Joy", "John", "Lizzy", "Uyo"];
+      console.log(friends);
+      console.log(friends[0]);
+      console.log(friends[2]);
+      //to get all elements
+      console.log(friends.length);
+      //to get the last element
+      console.log(friends[friends.length - 1]);
+
+      // const years = new Array(1992, 2000, 1999, 2003);
+
       // // mutate
-      // friends[3] = 'Jimmy';
-      // console.log(friends);
+      friends[3] = "Jimmy";
+      console.log(friends);
 
       // // Other data types in array
-      // const firstName = 'Esther';
-      // const BossLady = [firstName, 2025 - 1990, 'Kaduna', friends]
-      // console.log(BossLady);
+      const firstName = "Esther";
+      const BossLady = [firstName, 2025 - 1990, "Kaduna", friends, "teacher"];
+      console.log(BossLady);
 
       // Different elements with arrays
-      // function calcAge1(birthYear) {
-      //            return 2025 - birthYear
-      //         }
+      function calcAge1(birthYear) {
+        return 2025 - birthYear;
+      }
 
-      // const ages = [1999, 2000, 1970, 1977];
+      const years = [1999, 2000, 1970, 1977];
 
-      // const age1 = calcAge1.ages[0];
-      // const age2 = calcAge1.ages[1];
-      // const age3 = calcAge1.ages[2];
-      // const age4 = calcAge1.ages[ages.length -1];
+      const age1 = calcAge1(years[0]);
+      const age2 = calcAge1(years[1]);
+      const age3 = calcAge1(years[2]);
+      const age4 = calcAge1(years[years.length - 1]);
 
-      // console.log(age1, age2, age3, age4);
+      console.log(age1, age2, age3, age4);
+      */
+
+      // Array methods
+
+      /* const friends = ["Joy", "John", "Lizzy", "Uyo"];
+
+      const newLenght = friends.push("Jay");
+      console.log(friends);
+      console.log(newLenght);
+
+      friends.unshift("John");
+      console.log(friends);
+
+      const popped = friends.pop(); // remove the last element
+      console.log(friends);
+
+      friends.shift();
+      console.log(friends);
+
+      console.log(friends.indexOf("John"));
+      console.log(friends.indexOf("bob"));
+
+      console.log(friends.includes("John"));
+
+      if (friends.includes("Joy")) {
+        console.log("He is one of your friends");
+      } else {
+        console.log("not among your friends");
+      }
 
       // console.log(BossLady.push('Yam'));
       // console.log(BossLady.pop(''))
+      */
 
-      // pop
-      // shif
+      // Object Data Structure
+      // const bossLady = {
+      //   firstName: "Esther",
+      //   lastName: "Breath",
+      //   birthyear: 1990,
+      //   job: "Developer",
+      //   friends: ["Joy", "Uyo", "John"],
+
+      // calcAge: function (birthYear) {
+      //   return 2025 - birthYear;
+      // }
+
+      // function in an object is called method
+      // 'this' is used to represent the object
+
+      // calcAge: function () {
+      //   return 2025 - this.birthyear;
+      // },
+
+      /* calcAge: function () {
+          this.age = 2025 - this.birthyear; // here we are assigning a new property to the object called age.
+          return this.age;
+        },
+      };
+
+      console.log(bossLady.age);
+
+      // dot notation
+      console.log(bossLady.lastName);
+      console.log(bossLady["lastName"]);
+      // bracket notation
+      const nameKey = "Name";
+      console.log(bossLady["first" + nameKey]);
+      console.log(bossLady["last" + nameKey]);
+
+      // const interestedIn = prompt(
+      //   "what do you want about BossLady between firstName, lastName, age, job, and friends"
+      // );
+      // console.log(bossLady[interestedIn]);
+
+      bossLady.location = "Nigeria";
+      console.log(bossLady);
+
+      // Challenge
+      // write with template literal
+      // "Esther has 3 friends, and her best frien is called Joy "
+
+      console.log(
+        `${bossLady.firstName} has ${bossLady.friends.length} friends, and her best firend is called ${bossLady.friends[0]}`
+      );
+
+      console.log(this);
+      console.log(bossLady);
+      */
+
+      /* const bossLady = {
+        firstName: "Esther",
+        lastName: "Breath",
+        birthyear: 1990,
+        job: "Developer",
+        friends: ["Joy", "Uyo", "John"],
+        hasDriversLicense: true,
+
+        calcAge: function () {
+          return 2025 - this.birthyear;
+        },
+        // getSummary: function () {
+        //   this.summary = [
+        //     this.firstName,
+        //     this.lastName,
+        //     this.birthyear,
+        //     this.job,
+        //     this.friends,
+        //     this.hasDriversLicense,
+        //   ];
+        //   return this.summary;
+        // },
+        getSummary: function () {
+          return `${this.firstName} is a ${this.calcAge()} - year old ${
+            this.job
+          }, and she has ${
+            this.hasDriversLicense ? "a" : "no"
+          } driver's license `;
+        },
+      };
+
+      // console.log(this.calcAge);
+      console.log(bossLady.getSummary());
+      */
 
       // loops
       // for (let i = 0; i < 5; i++) {
-      //     console.log(i);
+      //   console.log(i);
       // }
 
-      // for (let x = 1; x < 21; x++) {
-      //     console.log(x);
+      // for loop keeps running if condition is true
+      // for (let rep = 1; rep <= 10; rep++) {
+      //   console.log(`Lifting weights repetition ${rep}`);
       // }
 
-      // for (let run = 1; run < 6; run++) {
-      //     console.log('I can run');
+      // for loop application
+
+      /* const bossLadyArray = [
+        "Esther",
+        "Breath",
+        2025 - 1990,
+        "teaccher",
+        ["John", "Joy", "Ali"],
+        true,
+      ];
+
+      //type array - same type
+      const types = [];
+      // Reading from array
+      for (let i = 0; i < bossLadyArray.length; i++) {
+        console.log(bossLadyArray[i], typeof bossLadyArray[i]);
+        */
+
+      // Filling type array
+      // types[i] = typeof bossLadyArray[i];
+
+      // Another method
+      //   types.push(typeof bossLadyArray[i]);
+      // }
+      // console.log(types);
+
+      /* const years = [1995, 2000, 1989, 2001];
+      const ages = [];
+
+      for (let i = 0; i < years.length; i++) {
+        ages.push(2025 - years[i]);
+      }
+      console.log(ages);
+
+      // continue and break
+      console.log(`--- ONLY STRNGS ---`);
+      for (let i = 0; i < bossLadyArray.length; i++) {
+        if (typeof bossLadyArray[i] !== "string") continue;
+        console.log(bossLadyArray[i], typeof bossLadyArray[i]);
+      }
+
+      // break terminates the whole loop
+
+      console.log(`--- BREAK WITH NUMBER ---`);
+      for (let i = 0; i < bossLadyArray.length; i++) {
+        if (typeof bossLadyArray[i] === "number") break;
+        console.log(bossLadyArray[i], typeof bossLadyArray[i]);
+      }
+        */
+
+      // Looping from the back
+      const bossLadyArray = [
+        "Esther",
+        "Breath",
+        2025 - 1990,
+        "teaccher",
+        ["John", "Joy", "Ali"],
+      ];
+
+      for (let i = bossLadyArray.length - 1; i >= 0; i--) {
+        console.log(i, bossLadyArray[i]);
+      }
+
+      // Loop in a loop
+      for (let exercise = 1; exercise < 4; exercise++) {
+        console.log(`------ starting exercise ${exercise}`);
+
+        for (let rep = 1; rep < 6; rep++) {
+          console.log(`exercise ${exercise} lifting weight repetition ${rep}`);
+        }
+      }
+
+      // While loop
+
+      for (let rep = 1; rep <= 10; rep++) {
+        console.log(`lifting weight repetition ${rep}`);
+      }
+
+      // let rep = 1;
+      // while (rep <= 10) {
+      //   console.log(`while: lifting weight repetition ${rep}`);
+      //   rep++;
       // }
 
       // // Rest
